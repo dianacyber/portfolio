@@ -1,0 +1,294 @@
+/* -----------------------------
+   Variables couleurs
+----------------------------- */
+:root {
+    --vert: #71A88D;
+    --vert-fonce: #3F6F57;
+    --fond: #F5F7F4;
+    --texte: #333;
+}
+
+/* -----------------------------
+   Reset / Base
+----------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--fond);
+    color: var(--texte);
+    line-height: 1.6;
+}
+
+/* -----------------------------------
+   Compétences — version cartes logos
+----------------------------------- */
+
+#competences-logos {
+    padding: 60px 0;
+}
+
+#competences-logos .grid-competences {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-skill {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-skill:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.card-skill img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 12px;
+    transition: transform 0.3s;
+}
+
+.card-skill img:hover {
+    transform: scale(1.15);
+}
+
+.card-skill .title {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--vert-fonce);
+}
+
+/* Distinction HTML / CSS */
+.card-html {
+    background: #ffe9e0;
+    border: 2px solid #ff9f80;
+}
+
+.card-css {
+    background: #e0f0ff;
+    border: 2px solid #87bfff;
+}
+
+
+/* -----------------------------
+   Conteneur général
+----------------------------- */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* -----------------------------
+   Sections
+----------------------------- */
+section {
+    padding: 80px 0;
+}
+
+/* -----------------------------
+   Accueil
+----------------------------- */
+#accueil {
+    height: 100vh;
+    background-color: var(--vert);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#accueil h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#accueil p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+#accueil .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: var(--vert-fonce);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#accueil .btn:hover {
+    background-color: #5a6b55;
+}
+
+/* -----------------------------
+   Titres de sections
+----------------------------- */
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    color: var(--vert-fonce);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* -----------------------------
+   À propos
+----------------------------- */
+#apropos p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* -----------------------------
+   Compétences
+----------------------------- */
+#competences ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#competences li {
+    background-color: var(--vert);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: transform 0.3s;
+}
+
+#competences li:hover {
+    transform: translateY(-5px);
+}
+
+.liste-competences {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.liste-competences li {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espace entre le logo et le texte */
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.liste-competences li img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.liste-competences li img:hover {
+    transform: scale(1.2);
+}
+
+
+/* -----------------------------
+   Projets
+----------------------------- */
+#projets .projet {
+    background-color: #e0f0ea; /* vert très clair */
+    border-left: 5px solid var(--vert-fonce);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#projets .projet:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+}
+
+#projets .projet h3 {
+    color: var(--vert-fonce);
+    margin-bottom: 10px;
+}
+
+/* -----------------------------
+   Stage
+----------------------------- */
+#stage p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* -----------------------------
+   Contact
+----------------------------- */
+#contact p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: var(--vert-fonce);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* -----------------------------
+   Responsive
+----------------------------- */
+@media (max-width: 768px) {
+    #accueil h1 {
+        font-size: 2.2em;
+    }
+
+    #accueil p {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    #competences ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
