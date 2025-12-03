@@ -67,6 +67,129 @@ body {
     margin: 0 auto;
 }
 
+
+
+/* --- SECTION VEILLE TECHNOLOGIQUE --- */
+
+#veille {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#veille h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+#veille h3 {
+    font-size: 1.4rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+#veille p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#veille ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+#veille ul li {
+    margin-bottom: 10px;
+}
+
+.veille-articles {
+    margin-top: 30px;
+}
+
+.veille-articles .article {
+    background-color: #f1f1f1;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.veille-articles .article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.veille-articles .article a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.veille-articles .article a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* --- MÉTHODES ET OUTILS DE VEILLE (STYLE MODERNE) --- */
+
+.veille-outils {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f9fa; /* léger fond gris pour distinguer */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.veille-outils h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.veille-outils ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* espacement entre chaque élément */
+    padding: 0;
+    list-style: none; /* on enlève les puces */
+}
+
+.veille-outils ul li {
+    background-color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.veille-outils ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.veille-outils p {
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+    color: #555;
+}
+
+
+
+
+
+
 /* Ligne des logos */
 .logos {
     display: flex;
