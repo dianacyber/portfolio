@@ -28,63 +28,88 @@ body {
    Compétences — version cartes logos
 ----------------------------------- */
 
-#competences .items {
+#competences-logos {
+    padding: 60px 0;
+}
+
+#competences-logos .grid-competences {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-#competences .card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-#competences .card img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-
-#competences .card .title {
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-}
-
-#competences .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-
-
-.marquee {
-    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
     width: 100%;
-    height: 110px;
-    position: relative;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.marquee-inner {
+
+
+/* --- SECTION COMPÉTENCES --- */
+
+#competences {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+#competences h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Container pour le défilement */
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Ligne des logos */
+.logos {
     display: flex;
     gap: 40px;
-    animation: scroll 18s linear infinite;
+    width: max-content;
+    animation: scroll 15s linear infinite;
 }
 
-.marquee-inner img {
-    width: 70px;
-    height: 70px;
+/* Logos */
+.logos img {
+    width: 90px;
+    height: 90px;
     object-fit: contain;
+    transition: transform 0.3s ease;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
 }
 
-@keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+/* Zoom léger au survol */
+.logos img:hover {
+    transform: scale(1.15);
 }
+
+/* Pause le défilement au survol */
+.logos:hover {
+    animation-play-state: paused;
+}
+
+/* Animation défilement infini */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+
+
 
 
 
