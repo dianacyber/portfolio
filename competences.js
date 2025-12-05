@@ -1,14 +1,16 @@
-// Animation compétences au scroll
-const cards = document.querySelectorAll('.card');
+// Animation badges Compétences / Outils au scroll
+const badges = document.querySelectorAll('.competences-category ul li');
 
-const showCards = () => {
-    cards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-            card.classList.add('visible');
+const showBadges = () => {
+    badges.forEach(badge => {
+        const rect = badge.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+            badge.classList.add('visible');
         }
     });
 };
 
-window.addEventListener('scroll', showCards);
-window.addEventListener('load', showCards);
+window.addEventListener('scroll', showBadges);
+window.addEventListener('load', showBadges);
+
+

@@ -23,6 +23,7 @@
             <p>Découvrez mes projets, mes compétences et mon parcours.</p>
             <a href="#apropos" class="btn">En savoir plus</a>
         </div>
+
     </section>
 
     <!-- À propos -->
@@ -40,11 +41,14 @@
     <section id="competences">
         <div class="container">
 <!-- Compétences -->
+
+ <!-- --- SECTION COMPÉTENCES --- -->
 <section id="competences">
-    <h2>Mes Compétences</h2>
+    <h2>Mes Compétences / Outils</h2>
 
     <div class="scroll-container">
         <div class="logos">
+            <!-- Logos -->
             <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank">
                 <img src="images/logo-js.png" alt="JavaScript">
             </a>
@@ -73,7 +77,7 @@
                 <img src="images/logo-github.png" alt="GitHub">
             </a>
 
-            <!-- duplication pour un défilement fluide -->
+            <!-- Duplication pour boucle fluide -->
             <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank">
                 <img src="images/logo-js.png" alt="JavaScript">
             </a>
@@ -106,13 +110,37 @@
 </section>
 
 
+
+
+
+
     <!-- Stage -->
     <section id="stage">
         <div class="container">
             <h2>Mon stage</h2>
-            <p>J’ai effectué mon stage chez Saint-Gobain Abrasifs.</p>
+            <p>J’ai effectué mon stage chez Saint-Gobain Surface Solutions France.</p>
+
+            <!-- Bloc Rapport de stage / CV stylé -->
+
+<!-- Bloc Rapport de stage avec couverture -->
+<div class="rapport-stage-card">
+    <a href="documents/Rapport_Stage_Diana.pdf" download>
+        <div class="rapport-image">
+            <img src="images/couverture-rapport.png" alt="Première page du rapport">
         </div>
-    </section>
+        <div class="rapport-info">
+
+            <p>Clique pour télécharger le rapport complet 📄</p> 
+        </div>
+    </a>
+</div>
+
+
+
+
+
+
+
 
     <!-- Projets -->
     <section id="projets">
@@ -191,67 +219,71 @@
 
 
     <!-- Points importants -->
-    <div class="veille-points">
-        <h3>Les points importants</h3>
+<div class="veille-points">
+    <h3>Les points importants</h3>
 
-        <h4>🔐 Côté utilisateur / visiteur</h4> </br>
-        <ul>
-            <li>Utiliser des mots de passe forts et uniques, idéalement avec authentification à deux facteurs (MFA).</li>
-            <li>Être vigilant aux liens suspects et attaques de phishing.</li>
-            <li>Vérifier que le site utilise HTTPS avant d’envoyer des données personnelles.</li>
-            <li>Utiliser un gestionnaire de mots de passe pour sécuriser ses identifiants.</li>
-        </ul>
-
-        <h4>🛠️ Côté technique / développeur</h4> </br>
-        <ul>
-            <li>Forcer HTTPS, SSL/TLS et HSTS pour chiffrer les échanges.</li>
-            <li>Valider et filtrer toutes les entrées utilisateurs pour éviter XSS et injections SQL.</li>
-            <li>Effectuer des sauvegardes régulières des fichiers et bases de données.</li>
-            <li>Appliquer le principe du moindre privilège pour les comptes administrateurs.</li>
-        </ul>
+    <h4>🔐 Côté utilisateur</h4> </br>
+    <div class="points-grid">
+        <div class="point-card">Mots de passe forts et uniques avec MFA</div>
+        <div class="point-card">Vérifier HTTPS avant d’envoyer des données</div>
+        <div class="point-card">Vigilance contre phishing et liens suspects</div>
+        <div class="point-card">Utiliser un gestionnaire de mots de passe</div>
     </div>
 
-</br>
-    <!-- Sources et articles récents -->
-    <div class="veille-articles">
-        <h3>Articles récents et sources 2025</h3>
-
-        <div class="article">
-            <strong>📰 Cybermalveillance.gouv.fr</strong> - 2025<br>
-            <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/securisation-sites-internet?utm_source=chatgpt.com" target="_blank">
-                Guide officiel : Sécuriser un site Internet
-            </a>
-        </div>
-
-        <div class="article">
-            <strong>📰 The Better Web Movement</strong> - 2025<br>
-            <a href="https://thebetterwebmovement.com/best-practices-for-web-security-in-2025-protect-your-website-from-common-threats-and-vulnerabilities/?utm_source=chatgpt.com" target="_blank">
-                Best Practices for Web Security in 2025
-            </a>
-        </div>
-
-        <div class="article">
-            <strong>📰 Seraphic Security</strong> - 2025<br>
-            <a href="https://seraphicsecurity.com/learn/website-security/website-security-in-2025-10-threats-and-10-critical-best-practice/?utm_source=chatgpt.com" target="_blank">
-                Website Security in 2025: 10 Threats + 10 Critical Best Practices
-            </a>
-        </div>
-
-        <div class="article">
-            <strong>📰 ZDNet</strong> - 2025<br>
-            <a href="https://viweb.net/blog/website-security-best-practices-2025/?utm_source=chatgpt.com" target="_blank">
-                Les outils indispensables pour sécuriser votre site web
-            </a>
-        </div>
+    <h4>🛠️ Côté technique / développeur</h4> </br>
+    <div class="points-grid">
+        <div class="point-card">Mettre à jour CMS, plugins et serveur</div>
+        <div class="point-card">Forcer HTTPS, SSL/TLS et HSTS</div>
+        <div class="point-card">Filtrer et valider toutes les entrées utilisateurs</div>
+        <div class="point-card">Pare-feu applicatif (WAF) ou protections similaires</div>
+        <div class="point-card">Sauvegardes régulières et plan de récupération</div>
+        <div class="point-card">Principe du moindre privilège pour les comptes admin</div>
     </div>
+</div>
+
+
+<section id="veille-articles">
+  <h2>Articles récents</h2>
+    <h1>Côté Utilisateur</h1>
+  <ul>
+    <li>
+      <strong>30 septembre 2025</strong> — <a href="https://www.vigicorp.fr/securiser-un-site-web-guide-complet-pour-le-proteger/" target="_blank">Sécuriser un site web : guide complet pour le protéger</a>
+    </li>
+    <li>
+      <strong>30 octobre 2025</strong> — <a href="https://amphibee.fr/blog/quelles-sont-les-bonnes-pratiques-du-web" target="_blank">Quelles sont les bonnes pratiques du web</a>
+    </li>
+    <li>
+      <strong>13 octobre 2025</strong> — <a href="https://www.info.gouv.fr/risques/cyber-conseils-aux-usagers" target="_blank">Conseils aux usagers – sécurité numérique</a>
+    </li>
+    <li>
+      <strong>21 novembre 2025</strong> — <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/les-10-regles-de-base-pour-la-securite-numerique" target="_blank">Les 10 règles de base pour la sécurité numérique</a>
+    </li>
+  </ul>
 </section>
 
 
+<section id="veille-technique">
+  <h2>Articles récents</h2>
+      <h1>Côté Technique</h1>
+
+  <ul>
+    <li>
+      <strong>25 août 2025</strong> — <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/securisation-sites-internet" target="_blank">Comment sécuriser son site Internet (bonnes pratiques)</a>
+    </li>
+    <li>
+      <strong>19 novembre 2025</strong> — <a href="https://xn--russir-en-b4a.fr/7-conseils-pour-securiser-son-site-internet/" target="_blank">7 conseils pour sécuriser son site Internet</a>
+    </li>
+    <li>
+      <strong>14 mars 2024</strong> — <a href="https://www.cnil.fr/fr/securite-securiser-les-sites-web" target="_blank">Sécuriser les sites web — recommandations de la CNIL</a>
+    </li>
 
 
-
-
-
+        <li>
+      <strong>30 avril 2025</strong> — <a href="https://fr.wix.com/blog/securite-web" target="_blank">Sécuriser son site internet : les 10 fondamentaux à connaître</a>
+    </li>
+    
+  </ul>
+</section>
 
 
     <!-- Contact -->
@@ -259,11 +291,22 @@
         <div class="container">
             <h2>Contact</h2>
             <p>Email : <a href="mailto:dianagakou@gmail.com">dianagakou@gmail.com</a></p>
-            <p>GitHub : <a href="#">Lien GitHub</a></p>
+<p>GitHub : <a href="https://github.com/dianacyber" target="_blank">dianacyber</a></p>
+
+
         </div>
+
+<p>Tu peux télécharger mon CV juste ici 
+<a href="documents/CV_Diana.pdf" class="btn-cv" download> 
+   <span class="fleche-dynamique">➜ CV de Diana 😉</span></p> 
+</a>
+
     </section>
 
 <script src="competences.js"></script>
+
+
+
 
 </body>
 

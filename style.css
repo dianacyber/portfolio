@@ -27,45 +27,57 @@ body {
 /* -----------------------------------
    Compétences — version cartes logos
 ----------------------------------- */
-
-#competences-logos {
-    padding: 60px 0;
-}
-
-#competences-logos .grid-competences {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-    width: 100%;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-/* --- SECTION COMPÉTENCES --- */
-
-#competences {
-    padding: 50px 0;
-    background-color: #f8f9fa;
-    text-align: center;
-}
-
-#competences h2 {
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 30px;
-    font-size: 2rem;
-}
-
-/* Container pour le défilement */
 .scroll-container {
     width: 100%;
     overflow: hidden;
-    position: relative;
-    margin: 0 auto;
 }
+
+.logos {
+    display: flex;
+    gap: 40px;
+    flex-wrap: nowrap; /* une seule ligne */
+    animation: scrollInfinite 20s linear infinite;
+}
+
+.logos img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    flex-shrink: 0; /* empêche les images de rétrécir */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.15);
+}
+
+.logos:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* déplace exactement la moitié de la ligne */
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logos {
+        gap: 25px;
+    }
+
+    .logos img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
 
 
 
@@ -183,6 +195,280 @@ body {
     text-align: center;
     font-style: italic;
     color: #555;
+}
+
+
+
+/* -----------------------------
+   Veille technologique – Cartes carrées
+----------------------------- */
+#veille-articles,
+#veille-technique {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    padding: 20px;
+}
+
+#veille-articles h2,
+#veille-technique h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #2a6f60;
+    margin-bottom: 30px;
+}
+
+/* Grille pour les cartes */
+#veille-articles ul,
+#veille-technique ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cartes carrées */
+#veille-articles li,
+#veille-technique li {
+    background-color: #00bfa5; /* couleur du carré */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120px; /* hauteur fixe pour un effet carré/rectangulaire */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+#veille-articles li:hover,
+#veille-technique li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+#veille-articles li strong,
+#veille-technique li strong {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+#veille-articles li a,
+#veille-technique li a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#veille-articles li a:hover,
+#veille-technique li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #veille-articles li,
+    #veille-technique li {
+        height: auto;
+        padding: 15px;
+    }
+}
+
+
+
+
+.rapport-stage {
+    background: linear-gradient(135deg, #71a88d, #3f6f57);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 1s forwards;
+    animation-delay: 0.5s; /* petit délai pour l'effet stylé */
+}
+
+/* cléframes pour faire glisser et apparaitre */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Forcer l'animation à se déclencher uniquement quand visible sur écran */
+.animate-on-scroll {
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .animate-on-scroll {
+        animation-play-state: running;
+    }
+}
+
+
+.rapport-stage-card {
+    max-width: 320px; /* Limite la largeur de la carte */
+    margin: 40px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    border: 3px solid #71a88d; /* cadre autour de la carte */
+}
+
+.rapport-stage-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.rapport-stage-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.rapport-image {
+    width: 100%;
+    height: 0;
+    padding-top: 125%; /* ratio hauteur/largeur pour que ça fasse un carré approximatif */
+    position: relative;
+    overflow: hidden;
+}
+
+.rapport-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* couvre le cadre sans déformer l'image */
+}
+
+.rapport-info {
+    background: linear-gradient(135deg, #71a88d, #3f6f57);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.rapport-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.rapport-info p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Animation d'apparition */
+.rapport-stage-card {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Centrer tous les textes des sections Veille */
+.veille-intro,
+.veille-sujet,
+.veille-points {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- POINTS IMPORTANTS EN CARTES --- */
+
+.points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.point-card {
+    background-color: hsl(160, 53%, 60%); /* bleu clair harmonieux */
+    padding: 18px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-weight: 500;
+    color: #04443d; /* texte vert-bleu foncé */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.point-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+}
+
+
+.fleche-dynamique {
+    display: inline-block;
+    font-size: 22px;
+    margin-left: 6px;
+    animation: bougeFleche 0.8s infinite alternate ease-in-out;
+}
+
+@keyframes bougeFleche {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(6px);
+    }
 }
 
 
@@ -442,3 +728,6 @@ section h2 {
         align-items: center;
     }
 }
+
+
+
